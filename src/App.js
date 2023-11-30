@@ -3,14 +3,11 @@ import {useContext} from "react";
 import {BrowserRouter} from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 import AppRoute from "./routes/AppRoute";
-import {LoadingContext} from "./context/LoadingProvider";
-import Loading from "./components/Loading";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App ()
 {
-  const {isLoading} = useContext(LoadingContext);
   return (
     <>
       {
@@ -30,13 +27,6 @@ function App ()
 
       }
       
-
-      {
-        // todo render Loading based on its condition
-         isLoading
-         &&
-         <Loading/>
-      }
    </>
   );
 }
